@@ -1,0 +1,4 @@
+execute_script /Users/dariasupriadkina/IdeaProjects/LabaProga_6/Server/src/Script67
+execute_script /Users/dariasupriadkina/IdeaProjects/LabaProga_6/Server/src/Script27
+update_by_id 7
+sum_of_salary

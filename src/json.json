@@ -1,0 +1,196 @@
+[
+  {
+    "id": 1,
+    "name": "a",
+    "coordinates": {
+      "x": 1,
+      "y": 1.0
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2020,
+          "month": 5,
+          "day": 12
+        },
+        "time": {
+          "hour": 15,
+          "minute": 28,
+          "second": 0,
+          "nano": 0
+        }
+      },
+      "offset": {
+        "totalSeconds": 7200
+      },
+      "zone": {
+        "id": "Europe/Paris"
+      }
+    },
+    "salary": 1,
+    "startDate": {
+      "date": {
+        "year": 2020,
+        "month": 5,
+        "day": 12
+      },
+      "time": {
+        "hour": 15,
+        "minute": 28,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "status": "HIRED",
+    "person": {
+      "height": 187.0,
+      "passportID": "12345678UYTRE"
+    }
+  },
+  {
+    "id": 4,
+    "name": "ca",
+    "coordinates": {
+      "x": 4,
+      "y": 4.5
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2020,
+          "month": 5,
+          "day": 12
+        },
+        "time": {
+          "hour": 15,
+          "minute": 30,
+          "second": 0,
+          "nano": 0
+        }
+      },
+      "offset": {
+        "totalSeconds": 7200
+      },
+      "zone": {
+        "id": "Europe/Paris"
+      }
+    },
+    "salary": 54655,
+    "startDate": {
+      "date": {
+        "year": 2020,
+        "month": 5,
+        "day": 12
+      },
+      "time": {
+        "hour": 15,
+        "minute": 30,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "status": "HIRED",
+    "person": {
+      "height": 187.09,
+      "passportID": "67578tgyfyfyugytfu"
+    }
+  },
+  {
+    "id": 3,
+    "name": "t",
+    "coordinates": {
+      "x": 3,
+      "y": 3.1
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2020,
+          "month": 5,
+          "day": 12
+        },
+        "time": {
+          "hour": 15,
+          "minute": 29,
+          "second": 0,
+          "nano": 0
+        }
+      },
+      "offset": {
+        "totalSeconds": 7200
+      },
+      "zone": {
+        "id": "Europe/Paris"
+      }
+    },
+    "salary": 4,
+    "startDate": {
+      "date": {
+        "year": 2020,
+        "month": 5,
+        "day": 12
+      },
+      "time": {
+        "hour": 15,
+        "minute": 29,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "position": "DIRECTOR",
+    "status": "HIRED",
+    "person": {
+      "height": 179.09,
+      "passportID": "748686798107GUYDGUYG"
+    }
+  },
+  {
+    "id": 2,
+    "name": "g",
+    "coordinates": {
+      "x": 2,
+      "y": 2.0
+    },
+    "creationDate": {
+      "dateTime": {
+        "date": {
+          "year": 2020,
+          "month": 5,
+          "day": 12
+        },
+        "time": {
+          "hour": 15,
+          "minute": 28,
+          "second": 0,
+          "nano": 0
+        }
+      },
+      "offset": {
+        "totalSeconds": 7200
+      },
+      "zone": {
+        "id": "Europe/Paris"
+      }
+    },
+    "salary": 2,
+    "startDate": {
+      "date": {
+        "year": 2020,
+        "month": 5,
+        "day": 12
+      },
+      "time": {
+        "hour": 15,
+        "minute": 28,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "position": "MANAGER",
+    "status": "REGULAR",
+    "person": {
+      "height": 176.0,
+      "passportID": "876543234567ERFGHJ"
+    }
+  }
+]
