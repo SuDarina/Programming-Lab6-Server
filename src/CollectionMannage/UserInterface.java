@@ -42,7 +42,7 @@ public class UserInterface {
     ServerSocketChannel ssc;
     ObjectInputStream ois = null;
     SelectionKey key;
-    boolean interactive = true;
+    Scanner scr = new Scanner(System.in);
 
 
 
@@ -64,22 +64,30 @@ public class UserInterface {
     Scanner scaner;
     Scanner oldScaner;
 
-    public UserInterface() throws IOException {
+    public UserInterface()  {
     }
 
     public  void setServer() throws IOException, ClassNotFoundException, FileIsEmptyException, java.text.ParseException, FieldException, ParseException {
         selector = Selector.open();
         ssc = ServerSocketChannel.open();
         server = ssc.socket();
-        server.bind(new InetSocketAddress(3545));
+        server.bind(new InetSocketAddress(3555));
         ssc.configureBlocking(false);
         ssc.register(selector, SelectionKey.OP_ACCEPT);
+
         serverWork();
     }
     public void serverWork() throws ClassNotFoundException, FileIsEmptyException, java.text.ParseException, FieldException, ParseException, IOException {
         try {
             while (true) {
-                selector.select();
+
+                selector.select(2000);
+
+                if (System.in.available() > 0)
+                            if (scr.next().equals("save"))
+                                save.save(reader);
+
+
                 Iterator<SelectionKey> keys = selector.selectedKeys().iterator();
                 while (keys.hasNext()) {
                     key = keys.next();
@@ -90,11 +98,10 @@ public class UserInterface {
                         SocketChannel channel = server.accept();
                         channel.configureBlocking(false);
                         channel.register(selector, SelectionKey.OP_READ, ByteBuffer.allocate(3000));
-                        interactive = true;
+
                     } else if (key.isReadable()) {
 
                         readClient();
-
                         if (!(comand1.equals("execute_script"))) {
                             System.out.println("имя: " + comands.getName());
                             comand = comands.getName();
@@ -104,11 +111,11 @@ public class UserInterface {
                             execute();
                         }
 
-
                     }
                 }
+
             }
-        } catch (IOException e){
+        } catch (IOException | InterruptedException e){
             System.out.println("Server work has been interrupted because of some problems with connection");
             save.save(reader);
         }
@@ -157,7 +164,7 @@ public class UserInterface {
 
 
 
-    public void execute() throws ParseException, FieldException, IOException, FileIsEmptyException, java.text.ParseException, ClassNotFoundException {
+    public void execute() throws ParseException, FieldException, IOException, FileIsEmptyException, java.text.ParseException, ClassNotFoundException, InterruptedException {
 
         switch (comand) {
             case ("help"):
@@ -167,7 +174,6 @@ public class UserInterface {
                 break;
             case ("exit"):
                 save.save(reader);
-                interactive = false;
                 bytes = "[программа завершена]".getBytes();
                 writeClient(bytes);
                 break;
@@ -429,6 +435,7 @@ public class UserInterface {
     }
 
 }
+
 
 
 
